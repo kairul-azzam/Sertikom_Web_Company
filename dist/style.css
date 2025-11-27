@@ -8,7 +8,7 @@
   color: white;
   /* GRADIENT + IMAGE */
   background:
-    linear-gradient(to left, #031926 0%, rgb(3, 25, 38) 35%, rgba(3, 25, 38, 0.88) 60%, transparent 100%),
+    linear-gradient(to right, #031926 0%, rgb(3, 25, 38) 35%, rgba(3, 25, 38, 0.88) 60%, transparent 100%),
     url('../asset/img/dungbu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@
     color: #1e81ff;
 }
 .collapse ul{
-    margin-left: 56%;
+    margin-left: 70%;
 }
 .navbar.scrolling-active{
     background-color: rgba(255, 255, 255, 0.15); 
@@ -50,7 +50,12 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
+.teksvisi{
+    text-align: justify;
+    line-height: 27px;
+    font-weight: 300;
+    font-size: 16px;
+}
 .box-tentangkami{
     /* border-radius: 10px;
     background: #333333;
@@ -83,15 +88,7 @@ background: linear-gradient(180deg, rgba(51, 51, 51, 1) 65%, rgba(3, 25, 38, 1) 
     width: 60%;
     
 }
-.ttgkm{
-    box-shadow: #000000 0px 4px 12px;
-    transition: 0.3s ease-in-out;
-}
-.ttgkm:hover{
-    transform: scale(1.04);
-}    
 .gambarit{
-    box-shadow: #000000 0px 4px 12px;
     transition: 0.3s ease-in-out;
 }
 .gambarit:hover{
@@ -104,6 +101,11 @@ ul li{
     margin-right: 2px;
     margin-left: -15px;
     color: rgba(0, 0, 255, 0.773);
+}
+
+.ttgkm li{
+    line-height: 30px;
+    font-weight: 300;
 }
 .layanan{
     background-color: #031926;
@@ -256,6 +258,26 @@ ul li{
     display: flex;
     flex-direction: column;
 }
-input[type="text"]{
-    width: 50%;
+input[type="text"], [type="email"]{
+    width: 70%;
+    margin: 4px 0px 20px 0px;
+}
+.form-box i{
+    color: blue;
+    margin-left: -25px;
+}
+.pesan{
+    padding-bottom: 80px;
+}
+.form-box label{
+    color: white;
+}
+.btn-form{
+    width: 25%;
+    max-width: 100%;
+    margin-left: 90px;
+    padding: 5px 90px 5px 20px;
+
+    text-align: center;
+    border-radius: 10px;
 }
