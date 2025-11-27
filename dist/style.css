@@ -6,9 +6,8 @@
   height: 140vh;
   align-items: center;
   color: white;
-  /* GRADIENT + IMAGE */
   background:
-    linear-gradient(to right, #031926 0%, rgb(3, 25, 38) 35%, rgba(3, 25, 38, 0.88) 60%, transparent 100%),
+    linear-gradient(to top, #031926 0%, rgb(3, 25, 38) 35%, rgba(3, 25, 38, 0.88) 60%, transparent 100%),
     url('../asset/img/dungbu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,36 +247,113 @@ ul li{
     width: 100%;
     padding-top: 10%;
     place-items: center;
+    padding-bottom: 200px;
 }
-
+form{
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: rgb(0, 0, 0) 0px 4px 12px;
+    border-radius: 10px;
+    padding-top: 20px;
+    /* border: solid 5px; */
+}
 .form-box{
-    background-color: #000000;
+    background: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.6)),
+              url('../asset/img/form\ \(2\).jpg');
+    background-size: 100%;
     padding: 100px;
-    width: 50%;
-    align-items: end;
-    display: flex;
-    flex-direction: column;
+    height: 85vh;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: #000000 0px 4px 12px;
 }
 input[type="text"], [type="email"]{
     width: 70%;
     margin: 4px 0px 20px 0px;
+    background-color: rgba(255, 255, 255, 0.543);
+    border-style: none;
+    border-radius: 8px;
+    padding: 8px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #000000;     
+  opacity: 0.7;        
+}
+form textarea{
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.543);
+    border-style: none;
+    border-radius: 8px;
+    padding: 8px;
+    
+}
+.btn-pesan{
+    width: 70%;
+    background-color: #2a7cff;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    margin-left: 23px;
+    border: solid 2px #2a7cff;
+    transition: 0.7s ease;
+    margin-top: 20px;
+}
+.btn-pesan:hover{
+    background-color: transparent;
 }
 .form-box i{
-    color: blue;
-    margin-left: -25px;
+    color: rgb(255, 255, 255);
 }
-.pesan{
+input.pesan{
+    background-color: rgba(255, 255, 255, 0.543);
     padding-bottom: 80px;
 }
 .form-box label{
     color: white;
 }
-.btn-form{
-    width: 25%;
-    max-width: 100%;
-    margin-left: 90px;
-    padding: 5px 90px 5px 20px;
-
+.footer {
+    background: linear-gradient(135deg, #07111E, #0A1A2F, #1B74E4);
+    color: #ffffff;
+    padding: 40px 20px;
     text-align: center;
-    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+}
+
+.footer-brand {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    color: #1B74E4; /* Biru cerah */
+}
+
+.footer-slogan {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    opacity: 0.8;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #1B74E4;
+}
+
+.footer-copy {
+    margin-top: 25px;
+    font-size: 13px;
+    opacity: 0.7;
 }

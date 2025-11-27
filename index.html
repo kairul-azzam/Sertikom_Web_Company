@@ -36,7 +36,7 @@
           <a class="nav-link fw-medium" href="#layanan-kami">Layanan</a>
         </li>
          <li class="nav-item mx-2">
-          <a class="nav-link fw-medium" href="#">Kontak</a>
+          <a class="nav-link fw-medium" href="#kontak">Kontak</a>
         </li>
       </ul>
     </div>
@@ -221,19 +221,48 @@
 </section>
 
 
-<div class="formlogin">
-  <div class="form-box">
-    <form action="#">
-      <label>Nama</label><br>
-      <input type="text" placeholder="Masukan Namamu"><i class="fa-solid fa-user"></i> <br>
+<div class="formlogin" id="kontak">
+  <div class="form-box pb-4 py-5">
+    
+    <form id="contactForm" class="pb-4" action="#">
+      <h1 class="text-center fw-bolder text-light mb-5">Hubungi Kami</h1>
+      <label class="text-start">Nama</label><br>
+      <i class="fa-solid fa-user"></i>
+      <input type="text" id="name" placeholder="Masukan Nama"> <br>
+
       <label for="">Email</label> <br>
-      <input type="email" placeholder="Masukan Email"><i class="fa-solid fa-envelope"></i> <br>
-      <label for="">pesan atau kebutuhan anda</label>
-      <input class="pesan" type="text" placeholder="Pesan"><i class="fa-solid fa-message"></i> <br> <br>
-      <button class="btn-form">Kirimkan<i class="fa-solid fa-paper-plane"></i></button>
+      <i class="fa-solid fa-envelope"></i>
+      <input type="email" id="email" placeholder="Masukan Email"> <br>
+
+      <label for="">Pesan</label><br>
+      <i class="fa-solid fa-message"></i>
+      <textarea id="message" placeholder="Pesan atau Kebutuhan Anda"></textarea>
+      
+       <button type="submit" class="btn-pesan text-light">Kirim&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button>
+
+       <p id="formMsg" class="msg"></p>
     </form>
   </div>
 </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="d-flex text-center justify-content-center mb-4">
+          <img src="asset/icon/logovisidigi-removebg-preview (1).png" alt="" width="3%">
+          <h2 class="footer-brand">Visi<span>Digital</span></h2>
+        </div>
+        <p class="footer-slogan">Membantu Transformasi Digital Bisnis Anda dengan Solusi Custom.</p>
+
+        <div class="footer-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentangkami">Tentang</a>
+            <a href="#layanan-kami">Layanan</a>
+            <a href="#kontak">kontak</a>
+        </div>
+
+        <p class="footer-copy">© 2025 VisiDigital – Konsultasi Teknologi yang Responsif, Interaktif, dan Kredibel.</p>
+    </div>
+</footer>
 
     
   </body>
