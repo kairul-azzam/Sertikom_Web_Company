@@ -47,13 +47,14 @@
     width: 100%;
     height: auto;
     padding-top: 50px;
-    padding-bottom: 50px;
+    
 }
 .teksvisi{
     text-align: justify;
     line-height: 27px;
     font-weight: 300;
     font-size: 16px;
+    
 }
 .box-tentangkami{
     /* border-radius: 10px;
@@ -66,7 +67,7 @@ background: linear-gradient(180deg, rgba(51, 51, 51, 1) 65%, rgba(3, 25, 38, 1) 
     
 }
 .box-tentangkami h1{
-    margin-top: 95px;
+    margin-top: 70px;
 }
 
 /* #031926 */
@@ -83,12 +84,15 @@ background: linear-gradient(180deg, rgba(51, 51, 51, 1) 65%, rgba(3, 25, 38, 1) 
     padding-top: 20%;
     padding-bottom: 20%;
 }
+
 .col1{
     width: 60%;
+    margin-top: -30px;
     
 }
 .gambarit{
     transition: 0.3s ease-in-out;
+    margin-top: -10px;
 }
 .gambarit:hover{
     transform: scale(1.04);
@@ -108,7 +112,7 @@ ul li{
 }
 .layanan{
     background-color: #031926;
-    padding-top: 50px;
+    padding-top: 40px;
     width: 100%;
     
 }
@@ -245,7 +249,7 @@ ul li{
 .formlogin{
     background-color: #031926;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 80px;
     place-items: center;
     padding-bottom: 200px;
 }
@@ -286,8 +290,10 @@ form textarea{
     border-style: none;
     border-radius: 8px;
     padding: 8px;
-    
+
+    max-height: 100px;
 }
+
 .btn-pesan{
     width: 70%;
     background-color: #2a7cff;
@@ -356,4 +362,131 @@ input.pesan{
     margin-top: 25px;
     font-size: 13px;
     opacity: 0.7;
+}
+
+
+/* ============================
+      RESPONSIVE WEBSITE
+   ============================ */
+
+/* --- Navbar --- */
+@media(max-width: 992px){
+    .collapse ul{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    .navbar-nav .nav-item{
+        margin: 10px 0;
+    }
+}
+
+/* --- Hero Section --- */
+@media(max-width: 768px){
+    .hero{
+        height: auto;
+        padding-top: 150px;
+        padding-bottom: 80px;
+        background-position: center;
+        text-align: center;
+    }
+    .teksjudul{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .hero-benefits{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .partner{
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+/* --- Tentang Kami --- */
+@media(max-width: 992px){
+    .row-cols-lg-3{
+        text-align: center;
+        margin-left: 0 !important;
+    }
+    .col1{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .teksvisi{
+        text-align: justify;
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 576px){
+    .gambarit{
+        width: 100%;
+    }
+}
+
+/* --- Layanan (Cards) --- */
+@media(max-width:1200px){
+    .group{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+@media(max-width:768px){
+    .group{
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .kartu img{
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* --- Testimoni --- */
+@media(max-width:768px){
+    .testi-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- Form Kontak --- */
+@media(max-width:992px){
+    .form-box{
+        width: 70%;
+        height: auto;
+        padding: 40px 25px;
+        background-size: cover;
+    }
+}
+
+@media(max-width:576px){
+    .form-box{
+        width: 90%;
+        padding: 30px 20px;
+    }
+    input[type="text"], input[type="email"], textarea{
+        width: 90%;
+    }
+    .btn-pesan{
+        width: 90%;
+        margin-left: 0;
+    }
+}
+
+/* --- Footer --- */
+@media(max-width:768px){
+    .footer img{
+        width: 10%;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
