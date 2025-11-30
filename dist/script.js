@@ -56,40 +56,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     message.value = "";
 });
 
-  function disableAOSonLayanan() {
-      const layananElements = document.querySelectorAll(".layanan [data-aos]");
-
-      if (window.innerWidth < 768) {
-          // Matikan efek AOS khusus elemen di dalam .layanan
-          layananElements.forEach(el => {
-              el.setAttribute("data-aos", ""); // kosongkan
-              el.setAttribute("data-aos-duration", "0");
-          });
-      } else {
-          // Kembalikan AOS jika layar besar
-          layananElements.forEach(el => {
-              // Atur kembali efek default sesuai isi HTML-mu
-              if (!el.dataset.originalAos) {
-                  el.dataset.originalAos = el.getAttribute("data-aos-default");
-              }
-              el.setAttribute("data-aos", el.dataset.originalAos || "fade-up");
-          });
-      }
-
-      // Re-init agar AOS membaca ulang perubahan
-      AOS.refresh();
-  }
-
-  // Simpan data-aos asli di elemen layanan (satu kali)
-  document.querySelectorAll(".layanan [data-aos]").forEach(el => {
-      el.dataset.originalAos = el.getAttribute("data-aos");
-  });
-
-  // Jalankan saat load
-  disableAOSonLayanan();
-
-  // Jalankan lagi saat resize
-  window.addEventListener("resize", disableAOSonLayanan);
+  
 
 
 

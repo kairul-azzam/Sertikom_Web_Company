@@ -285,7 +285,7 @@ textarea::placeholder {
   opacity: 0.7;        
 }
 form textarea{
-    width: 70%;
+    width: 280px;
     background-color: rgba(255, 255, 255, 0.543);
     border-style: none;
     border-radius: 8px;
