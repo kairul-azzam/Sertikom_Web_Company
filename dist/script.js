@@ -1,62 +1,87 @@
+// NAVBAR SCROLL
 const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () =>{
-    const posisi = window.scrollY > 0
-    navbar.classList.toggle("scrolling-active", posisi)
-})
-
-document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault(); // mencegah submit default
-
-    let name    = document.getElementById("name");
-    let email   = document.getElementById("email");
-    let message = document.getElementById("message");
-    let formMsg = document.getElementById("formMsg");
-
-    // regex email
-    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-    // reset pesan error
-    formMsg.innerHTML = "";
-    formMsg.style.color = "#ff4d4d";
-
-    // validasi kosong
-    if(name.value.trim() === ""){
-        formMsg.innerHTML = "Nama tidak boleh kosong.";
-        name.focus();
-        return false;
-    }
-
-    if(email.value.trim() === ""){
-        formMsg.innerHTML = "Email tidak boleh kosong.";
-        email.focus();
-        return false;
-    }
-
-    // validasi format email
-    if(!email.value.match(emailPattern)){
-        formMsg.innerHTML = "Format Email tidak valid.";
-        email.focus();
-        return false;
-    }
-
-    if(message.value.trim() === ""){
-        formMsg.innerHTML = "Pesan tidak boleh kosong.";
-        message.focus();
-        return false;
-    }
-
-    // jika valid
-    formMsg.style.color = "#28b463";
-    formMsg.innerHTML = "Pesan berhasil dikirim. Kami akan menghubungi Anda segera.";
-
-    // reset form setelah sukses
-    name.value = "";
-    email.value = "";
-    message.value = "";
+window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolling-active", window.scrollY > 0);
 });
 
-  
+// VALIDASI FORM KONTAK
+document.addEventListener("DOMContentLoaded", function () {
 
+    const form = document.querySelector(".contact-form");
 
+    function createErrorElement(input) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "error-wrapper";
 
+        const error = document.createElement("small");
+        error.className = "error-text";
+        wrapper.appendChild(error);
+
+        input.insertAdjacentElement("afterend", wrapper);
+        return error;
+    }
+
+    const nameInput = form.querySelector('input[name="name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const messageInput = form.querySelector('textarea[name="message"]');
+
+    const nameError = createErrorElement(nameInput);
+    const emailError = createErrorElement(emailInput);
+    const messageError = createErrorElement(messageInput);
+
+    // Pesan sukses
+    const successMsg = document.createElement("p");
+    successMsg.className = "success-message";
+    form.appendChild(successMsg);
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let valid = true;
+
+        // Reset
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        successMsg.textContent = "";
+
+        // Nama
+        if (nameInput.value.trim() === "") {
+            nameError.textContent = "Nama tidak boleh kosong.";
+            valid = false;
+        }
+
+        // Email
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() === "") {
+            emailError.textContent = "Email tidak boleh kosong.";
+            valid = false;
+        } else if (!pattern.test(emailInput.value)) {
+            emailError.textContent = "Format email tidak valid.";
+            valid = false;
+        }
+
+        // Pesan
+        if (messageInput.value.trim() === "") {
+            messageError.textContent = "Pesan tidak boleh kosong.";
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        // Jika berhasil
+        successMsg.textContent = "Pesan berhasil dikirim! Kami akan segera menghubungi Anda.";
+
+        // Reset form
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+
+        setTimeout(() => successMsg.textContent = "", 4000);
+    });
+
+    // Error hilang otomatis ketika mengetik
+    nameInput.addEventListener("input", () => nameError.textContent = "");
+    emailInput.addEventListener("input", () => emailError.textContent = "");
+    messageInput.addEventListener("input", () => messageError.textContent = "");
+});

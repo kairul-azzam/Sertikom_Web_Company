@@ -2,6 +2,9 @@
     font-family: Poppins;
     box-sizing: border-box;
 }
+body{
+    background-color: #031926;
+}
 .hero {
   height: 140vh;
   align-items: center;
@@ -254,78 +257,110 @@ ul li{
     color: #7f8ea3;
 }
 
-.formlogin{
+/* Contact Section */
+.jdl-kontak{
     background-color: #031926;
+
+}
+#kontak iframe{
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 171, 240, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+#kontak {
+    background-color: rgb(3, 25, 38);
+  min-height: 100vh;
+  padding: 20px 10% 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  max-height: 500px;
+  background: #011724;
+  padding: 40px;
+  border-radius: 12px;
+  /* box-shadow: 0 0 25px rgba(0, 171, 240, 0.4); */
+  display: flex;
+  flex-direction: column;
+  border: 2.5px solid #00abf0;
+  gap: 20px;
+  padding-bottom: 540px;
+}
+
+.contact-form h2 {
+  font-size: 36px;
+  color: #00abf0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #081b29;
+  color: #ededed;
+  border: 1.5px solid #00abf0;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: none;
+    display: block;
     width: 100%;
-    padding-top: 80px;
-    place-items: center;
-    padding-bottom: 200px;
-}
-form{
-    backdrop-filter: blur(10px);
-    text-align: center;
-    box-shadow: rgb(0, 0, 0) 0px 4px 12px;
-    border-radius: 10px;
-    padding-top: 20px;
-    /* border: solid 5px; */
-}
-.form-box{
-    background: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.6)),
-              url('../asset/img/form\ \(2\).jpg');
-    background-size: 100%;
-    padding: 100px;
-    height: 85vh;
-    width: 40%;
-    border-radius: 10px;
-    box-shadow: #000000 0px 4px 12px;
-}
-input[type="text"], [type="email"]{
-    width: 70%;
-    margin: 4px 0px 20px 0px;
-    background-color: rgba(255, 255, 255, 0.543);
-    border-style: none;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
     border-radius: 8px;
-    padding: 8px;
-}
-input::placeholder,
-textarea::placeholder {
-  color: #000000;     
-  opacity: 0.7;        
-}
-form textarea{
-    width: 280px;
-    background-color: rgba(255, 255, 255, 0.543);
-    border-style: none;
-    border-radius: 8px;
-    padding: 8px;
+    font-size: 16px;
+    background: #081b29;
+    color: #ededed;
+    border: 1.5px solid #00abf0;
+}    
 
-    max-height: 100px;
+.contact-form button {
+  align-self: center;
+  background: #00abf0;
+  color: #081b29;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn-pesan{
-    width: 70%;
-    background-color: #2a7cff;
-    border-radius: 10px;
-    border-style: none;
-    height: 40px;
-    margin-left: 23px;
-    border: solid 2px #2a7cff;
-    transition: 0.7s ease;
-    margin-top: 20px;
+.contact-form button:hover {
+  background: #0086bf;
+  color: #fff;
 }
-.btn-pesan:hover{
-    background-color: transparent;
+/* wrapper error */
+.error-wrapper {
+    margin-top: 5px;
 }
-.form-box i{
-    color: rgb(255, 255, 255);
+
+/* text error */
+.error-text {
+    color: red;
+    font-size: 13px;
 }
-input.pesan{
-    background-color: rgba(255, 255, 255, 0.543);
-    padding-bottom: 80px;
+
+/* pesan sukses */
+.success-message {
+    color: #00ff88;
+    font-weight: 600;
+    margin-top: 15px;
 }
-.form-box label{
-    color: white;
-}
+
 .footer {
     background: linear-gradient(135deg, #07111E, #0A1A2F, #1B74E4);
     color: #ffffff;
@@ -508,4 +543,91 @@ input.pesan{
     }
 }
 
+/* Responsive Contact Section */
+@media (max-width: 992px) {
+    #kontak {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 5% 60px;
+    }
+
+    #kontak iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        padding: 30px 25px;
+        padding-bottom: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    #kontak {
+        padding: 40px 20px 60px;
+        gap: 35px;
+    }
+
+    #kontak iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact-form h2 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+        padding-bottom: 350px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 576px) {
+    #kontak {
+        padding: 30px 15px 50px;
+        gap: 25px;
+    }
+
+    #kontak iframe {
+        height: 260px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        gap: 15px;
+        padding-bottom: 300px;
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
 
