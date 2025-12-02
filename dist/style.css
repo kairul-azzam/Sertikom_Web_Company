@@ -140,7 +140,8 @@ ul li{
     transition: 0.5s;
 }
 .group .kartu:hover img{
-    transform: scale(1.2);
+    
+    filter: brightness(30%);
 }
 .group .kartu{
     color: #c7c3c3;
@@ -157,7 +158,6 @@ ul li{
     transition: 0.5s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.158); /* Bayangan lembut */
     
-    backdrop-filter: blur(100px);
     border-radius: 10px;
 }
 .group .kartu:hover .content{
@@ -169,6 +169,14 @@ ul li{
 }
 .group .kartu .text{
     color: #ccc;
+    
+}
+
+.content h1{
+    font-size: 25                  px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .testimoni {
@@ -365,9 +373,6 @@ input.pesan{
 }
 
 
-/* ============================
-      RESPONSIVE WEBSITE
-   ============================ */
 
 /* --- Navbar --- */
 @media(max-width: 992px){
@@ -379,6 +384,7 @@ input.pesan{
         margin: 10px 0;
     }
 }
+
 
 /* --- Hero Section --- */
 @media(max-width: 768px){
@@ -490,3 +496,5 @@ input.pesan{
         gap: 10px;
     }
 }
+
+
