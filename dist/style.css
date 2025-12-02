@@ -173,7 +173,7 @@ ul li{
 }
 
 .content h1{
-    font-size: 25                  px;
+    font-size: 25px;
     color: #ffffff;
     font-weight: 600;
     margin-bottom: 10px;
@@ -421,9 +421,15 @@ input.pesan{
         margin-top: 30px;
     }
     .teksvisi{
-        text-align: justify;
+        text-align: start;
         padding: 0 10px;
     }
+    .box-tentangkami{
+        width: 100%;
+        padding-bottom: -50px;
+    }    
+
+
 }
 
 @media(max-width: 576px){
@@ -472,8 +478,13 @@ input.pesan{
 }
 
 @media(max-width:576px){
-    .form-box{
+    form{
         width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+    .form-box{
+        width: 95%;
         padding: 30px 20px;
     }
     input[type="text"], input[type="email"], textarea{
@@ -481,7 +492,7 @@ input.pesan{
     }
     .btn-pesan{
         width: 90%;
-        margin-left: 0;
+        margin-left: 9%;
     }
 }
 
